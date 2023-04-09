@@ -57,7 +57,7 @@ npx serve build
 > 1. 버킷 이름 설정 : `dicegame.react.su`
 > 2. 버킷 액세스 차단 설정 : 체크 해체, 체크 표시는 다음과 같다. 
 >
-> ![image-20230406185159781](C:\Users\areur\AppData\Roaming\Typora\typora-user-images\image-20230406185159781.png)
+> ![image](https://user-images.githubusercontent.com/99783474/230757442-459b2bce-4c2d-4083-94d6-b9326d6ee6fa.png)
 >
 > 3. 버킷 만들기 
 > 4. 속성 > 정적 웹 사이트 호스팅 편집 > `활성화` 체크 
@@ -66,7 +66,7 @@ npx serve build
 > 7. 권한 > 버킷 정책 > 편집 > 정책 생성기 
 >    * 웹 브라우저가 버킷에서 할 수 있는 권한을 설정해주는 것
 >
-> ![image-20230406190143237](C:\Users\areur\AppData\Roaming\Typora\typora-user-images\image-20230406190143237.png)
+> ![image](https://user-images.githubusercontent.com/99783474/230757448-08d206cf-28b7-4fe1-9db0-fb704143c3bb.png)
 >
 > 8. Add Statement > Generate Policy 
 >    * Policy JSON Document => 정책부분에 복붙하기 > 변경사항 저장
