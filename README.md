@@ -1,6 +1,8 @@
 # React 웹 개발 시작하기 
 > 🟣 코드잇을 통해 `React 웹 개발 시작하기` 공부한 내용을 정리 
 ### [🎲 주사위게임](http://dicegame.react.su.s3-website.us-east-2.amazonaws.com/)
+![image](https://user-images.githubusercontent.com/99783474/230758280-1b9829d8-a8f2-45ef-a38e-b808e9bc5ae7.png)
+
 <br>
 
 ## [0. React Start](https://github.com/oiosu/React-web/blob/master/01_REACT%20%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.md)
