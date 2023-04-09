@@ -392,6 +392,7 @@ const [num, setNum] = useState(1);
 <br>
 
 ## [13. 인라인 스타일](https://github.com/oiosu/React-web/blob/master/02_13.%20%EC%9D%B8%EB%9D%BC%EC%9D%B8%20%EC%8A%A4%ED%83%80%EC%9D%BC.md)
+
 <br>
 ## [14. CSS 클래스네임](https://github.com/oiosu/React-web/blob/master/02_14.%20CSS%20%ED%81%B4%EB%9E%98%EC%8A%A4%EB%84%A4%EC%9E%84.md)
 * 함수 내부에는 `color prop`에 따라서 스타일 객체 값이 바뀌는 것이 아닌 `className` 값이 달라지도록 해야한다. 
