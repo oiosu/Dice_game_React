@@ -16,7 +16,6 @@
 
 ## [1. `index.html` 파일에서 하는 일](https://github.com/oiosu/React-web/blob/master/02_1.%20%EC%9D%B8%EB%8D%B1%EC%8A%A4%20%ED%8C%8C%EC%9D%BC%EC%97%90%EC%84%9C%20%ED%95%98%EB%8A%94%20%EC%9D%BC.md)
 > * 웹 브라우저에서 가장 먼저 실행되는 파일 
-* 
 
 > ```react
 > import ReactDOM from 'react-dom/client';
