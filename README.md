@@ -17,7 +17,7 @@
 ## [1. `index.html` 파일에서 하는 일](https://github.com/oiosu/React-web/blob/master/02_1.%20%EC%9D%B8%EB%8D%B1%EC%8A%A4%20%ED%8C%8C%EC%9D%BC%EC%97%90%EC%84%9C%20%ED%95%98%EB%8A%94%20%EC%9D%BC.md)
 > * 웹 브라우저에서 가장 먼저 실행되는 파일 
 
-> ```react
+> ```javascript
 > import ReactDOM from 'react-dom/client';
 > 
 > 
@@ -70,7 +70,7 @@
 
   하지만 마약 `DIV` 라는 태그를 사용하고 싶지 않다면 리액트에서 제공하는 Fragement 을 사용하면 된다.
 
-```react
+```javascript
 import {Fragment} from 'react';
 
 ReactDOM.render(
@@ -97,7 +97,7 @@ ReactDOM.render(
 
   > `{}` 중괄호로 감싸주면 된다.
 
-```react
+```javascript
 import ReactDOM from 'react-dom';
 
 const product = '맥북';
@@ -114,14 +114,14 @@ ReactDOM.render(
 {product.toUpperCase()}
 ```
 
-```react
+```javascript
 const porduct = '맥북';
 const model = 'Air';
 
 <h1>나만의 {product + model} 주문하기 </h1>
 ```
 
-```react
+```javascript
 const product = '맥북';
 const model = 'Air';
 const item = product + model;
@@ -129,13 +129,13 @@ const item = product + model;
 <h1>나만의 {item} 주문하기 </h1>
 ```
 
-```react
+```javascript
 const imageUrl = '이미지 주소';
 
 <img src={imageUrl} alt="제품 사진" />
 ```
 
-```react
+```javascript
 function handleClick() {
     alert('곧 도착합니다!');
 }
@@ -153,7 +153,7 @@ function handleClick() {
 ## [5. Component](https://github.com/oiosu/React-web/blob/master/02_5.%20Component.md)
 `React element` 를 ReactDOM에 render 메소드로 전달하게 되면 리액트가 이 객체를 해석해서 HTML로 렌더링 하게 된다. 
 
-```react
+```javascript
 import ReactDOM from 'react-dom';
 
 const element = <h1>안녕 리액트!</h1>;
@@ -166,7 +166,7 @@ ReactDOM.render(element, document.getElementById('root'));
 
 또한 `React element` 를 함수 형태로 만들어 내면 JSX문법을 작성할 떄 커스텀 태그처럼 활용할 수 도 있다.
 
-```react
+```javascript
 import ReactDOM from 'react-dom';
 
 function Hello(){
@@ -204,7 +204,7 @@ ReactDOM.render(element, document.getElementById('root'));
 ## [7. children](https://github.com/oiosu/React-web/blob/master/02_7.%20children.md)
 > 컴포넌트의 자식들을 값으로 갖는 prop 이다. 
 
-```react
+```javascript
 //Button.js
 
 function Button({ children }) {
@@ -214,7 +214,7 @@ function Button({ children }) {
 export default Button;
 ```
 
-```react
+```javascript
 //App.js
 
 <Button>던지기</Button>
@@ -234,7 +234,7 @@ export default Button;
 > 1. `useState` 라는 함수 불러오기 
 > 2. `useState`  함수는 파라미터로 초기값을 전달 받고 이 함수가 실행된 다음에는 배열의 형태로 요소 두개를 리턴하게 된다.  그래서 보통 배열의 Destructuring 문법으로 코드를 작성하게 되는 것이다. 
 >
-> ```react
+> ```javascript
 > import { useState } from 'react';
 > 
 > function App(){
@@ -262,7 +262,7 @@ export default Button;
 
 > 1. useState 을 활용하여 sum이라는 State 만들기 
 >
-> ```react
+> ```javascript
 > //sum State에 새로 나온 주사위 숫잣값을 더해줄 것이다.
 > //당연히 state 값을 변경하려면 setter 함수를 활용해야 한다. 
 > const [sum, setSum] = useState(0);
@@ -294,13 +294,13 @@ export default Button;
 >
 > > (1) 빈 배열을 초깃값으로 갖는 `gameHistory` 라는 State를 만들기
 > >
-> > ```react
+> > ```javascript
 > > const [gameHistory, setGameHistory] = useState([]);
 > > ```
 > >
 > > (2) push 메소드로 nextNum을 추가한 다음에 `setter` 함수로 새 값이 추가된 `gameHistory` 를 전달해 준다. 
 > >
-> > ```react
+> > ```javascript
 > > const handleRollClick = () => {
 > > const nextNum = random(6);
 > > setNum(nextNum);
@@ -311,7 +311,7 @@ export default Button;
 > >
 > > (3) 초기화 함수는 초깃값인 빈 배열을 전달해 주면 된다. 
 > >
-> > ```react
+> > ```javascript
 > > const handleClearClick = () => {
 > > setNum(1);
 > > setSum(0);
@@ -321,7 +321,7 @@ export default Button;
 > >
 > > (4) 각 주사위 숫잣값들을 쉽표로 연결해서 보여줄 것이다. 
 > >
-> > ```react
+> > ```javascript
 > > {gameHistory.join(', ')}
 > > ```
 > >
@@ -333,7 +333,7 @@ export default Button;
 >
 > 그래서 이렇게 배열이나 객체 같은 참조형 타입의 State를 변경할 때는 **아예 새롭게 만든다고 생각하는 것이 좋다.** 가장 간단한 방법은 `spread` 문법을 활용하는 것이다. 
 >
-> ```react
+> ```javascript
 >   const handleRollClick = () => {
 >     const nextNum = random(6);
 >     setNum(nextNum);
@@ -356,7 +356,7 @@ export default Button;
 ## [11. 컴포넌트 재사용하기 & 코드 정리하기 ](https://github.com/oiosu/React-web/blob/master/02_11.%20%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%20%EC%9E%AC%EC%82%AC%EC%9A%A9%26%EC%BD%94%EB%93%9C%EC%A0%95%EB%A6%AC.md)
 * 자식 컴포넌트의 state를 부모 컴포넌트로 올려주는 걸 `State Lifting` 이라고 한다. 
 
-```react
+```javascript
 const [num, setNum] = useState(1);
     const [sum, setSum] = useState(0);
     const [gameHistory, setGameHistory] = useState([]);
@@ -398,7 +398,7 @@ const [num, setNum] = useState(1);
 
 ##### ⭐클래스 명을 추가할 때 빈 공백이 필요하다는 점 참고하기
 
-```react
+```javascript
 import './Button.css';
 
 function Button({ className = '', color = 'blue', children, onClick }) {
@@ -423,7 +423,7 @@ export default Button;
 >
 >    이미지 파일은 `import` 구문을 통해 불러오고, 불러온 이미지 주소를 `src` 속성으로 사용한다. 
 >
->    ```react
+>    ```javascript
 >    import diceImg from './assets/dice.png';
 >    
 >    function Dice() {
@@ -439,7 +439,7 @@ export default Button;
 >
 >    프로퍼티 이름은 CSS 속성 이름으로, 프로퍼티 값은 CSS 속성 값으로 쓰는데요, 이때 프로퍼티 이름은 아래의 `boarderRadius` 처럼 **대시 기호 없이 카멜 케이스로** 써야 한다는 점도 꼭 기억
 >
->    ```react
+>    ```javascript
 >    import diceImg from './assets/dice.png';
 >    
 >    const style = {
@@ -459,7 +459,7 @@ export default Button;
 >
 >    `import` 구문으로 파일을 불러올 수 있는데요, 이때 `from` 키워드 없이 사용하면 된다. 
 >
->    ```react
+>    ```javascript
 >    import diceImg from './assets/dice.png';
 >    import './Dice.css';
 >    
@@ -474,7 +474,7 @@ export default Button;
 >
 >    CSS 파일에 정의된 클래스명을 `className` prop에 문자열로 넣어줄때 재사용성을 위해 `className` prop을 부모 컴포넌트에서 받으면 더 좋다. 
 >
->    ```react
+>    ```javascript
 >    import diceImg from './assets/dice.png';
 >    import './Dice.css';
 >    
@@ -495,13 +495,13 @@ export default Button;
 # [React 배포하기](https://github.com/oiosu/React-web/blob/master/03_REACT%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0.md) 
 #### 1. 빌드하기 
 
-```bash
+```shell
 npm run build
 ```
 
 > `build` 라는 폴더 생성
 
-```bash
+```shell
 npx serve build
 ```
 
